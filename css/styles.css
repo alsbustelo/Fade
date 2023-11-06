@@ -1,0 +1,203 @@
+/* Como funciona css:
+selector {
+    propiedad: valor;
+} 
+Tipos de selectors:
+  Universal = *
+  tag = <h1>, <p>, <div>, <a>
+  class = ."nameclass"
+  id
+  por atributo
+  descendiente
+  pseudo clases*/
+/* Paleta de colores */
+:root {
+  --primary-dark: #0a1128;
+  --primary-midnight: #001f54;
+  --primary-royal: #034078;
+  --primary-teal: #1282a2;
+  --background-light: #fefcfb;
+  --color-space-cadet: #2b2d42;
+  --color-cool-gray: #8d99ae;
+  --color-anti-flash-white: #edf2f4;
+  --color-red-pantone: #ef233c;
+  --color-fire-engine-red: #d90429;
+  --color-Raisin-black: #232528;
+  --color-funy-yellow: #FBB810;
+  --color-suny-yellow: #FBB711;
+
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+}
+
+/* Estilos para el encabezado */
+header {
+  padding: 20px;
+  text-align: left;
+  background-image: radial-gradient(ellipse farthest-side at center, var(--color-funy-yellow), var(--color-suny-yellow));
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-anti-flash-white);
+  position: relative; /* Agregamos posición relativa al encabezado */
+}
+
+/* Estilos para el logotipo */
+.logo {
+  max-width: 170px; /* Ajusta el tamaño máximo del logotipo */
+  position: absolute; /* Cambiamos la posición a absoluta */
+  top: 0px; /* Distancia desde la parte superior */
+  left: 5px; /* Distancia desde la izquierda */
+}
+
+/* Estilos para el encabezado h1 */
+header h1 {
+  color: var(--primary-dark);
+  margin: 0;
+  margin-left: 85px;
+  margin-top: 30px; /* Añadido para ajustar el espacio entre el logo y h1 */
+}
+
+/* Estilos para el encabezado p */
+header p {
+  margin: 0;
+  color: var(--color-cool-gray);
+  margin-left: 100px; /* Añadido para ajustar el espacio entre el logo y p */
+}
+
+/* Otros estilos para el encabezado */
+
+
+/* Estilos para la barra de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-Raisin-black);
+  padding: 10px 0;
+  margin-top: 10;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: var(--color-anti-flash-white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--primary-midnight);
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+}
+
+/* Estilos generales para las secciones */
+.section {
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-anti-flash-white);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección "Hero" */
+.hero h2 {
+  font-size: 2.5rem;
+  margin: 20px;
+  color: var(--primary-midnight);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--color-cool-gray);
+}
+
+/* Estilos para la sección "Sobre Nosotros" */
+.about-us {
+  background-color: var(--color-space-cadet);
+  color: var(--color-anti-flash-white);
+}
+
+/* Estilos para el pie de página */
+footer {
+  padding: 20px;
+  background-color: var(--color-space-cadet);
+  color: var(--color-anti-flash-white);
+}
+
+/* Estilos para el contenido del pie de página */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Estilos para las secciones dentro del pie de página */
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados de las secciones del pie de página */
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--color-anti-flash-white);
+}
+
+/* Estilos para las listas dentro del pie de página */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para los enlaces dentro del pie de página */
+.footer-section a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-anti-flash-white);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+  color: var(--primary-midnight);
+}
+
+/* Estilos para la sección inferior del pie de página */
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-cool-gray);
+}
+
+/* Estilos para los párrafos dentro de la sección inferior del pie de página */
+.footer-bottom p {
+  font-size: 14px;
+  color: var(--color-anti-flash-white);
+}
